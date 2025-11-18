@@ -1,0 +1,13 @@
+Conectar-a-BD-de-Azure:
+
+1.  Instalar la extensión mssql
+2.  Abrir una carpeta en VSC (workspace-vsc)
+3.  Crear queries-awlt.sql
+4.  Ir a botón SQL Server
+5.  Agregar conexión
+6.  Nombrar perfil: PerfilDeErick
+7.  Buscar cadena de conexión de la BD (ADO.NET (autenticación de SQL) la de abajo)
+8.  Conectar
+9.  Desplegar tablas
+10. Hacer consultas (queries-awlt.sql)
+
