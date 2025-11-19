@@ -1,0 +1,14 @@
+Wide World Importers sample database v1.0
+https://github.com/Microsoft/sql-server-samples/releases/tag/wide-world-importers-v1.0
+
+
+Instalar la base de datos AdventureWorks2022 (.bak)
+
+1. Click derecho en Bases de Datos
+2. Restaurar base de datos
+3. Dispositivo
+4. ...
+5. Agregar
+6. Buscar la base de datos en C:\Backup (Ya deben vivir ahí las bases de datos)
+7. Aceptar, Aceptar, darle nombre, Aceptar, Aceptar (mensaje emergente)
+8. Hacemos lo mismo con WideWordImporters2022
