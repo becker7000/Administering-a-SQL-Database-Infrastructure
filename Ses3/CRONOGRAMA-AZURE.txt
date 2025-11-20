@@ -1,0 +1,49 @@
+
+=====================================================================================
+DÍA 1
+=====================================================================================
+AM 
+
+10:00  Examen
+10:15  Intro a Azure Databases [10:30 AM]
+       Instalaciones [11:30 AM]
+       Servicios en Azure [12:00 PM]
+10:30  Paseo general por Azure:
+        1.  Checar la calculadora de Azure
+	2.  Crear grupo de recursos
+	3.  Crear cuenta de almacenamiento [01:15 PM]
+	4.  Instalación CLI Azure
+	5.  Automatización de despliegue en Azure CLI
+	6.  Infraestructura como recurso en Azure (CLI)
+
+PM
+
+
+12:15  Intro a Azure SQL
+12:20  Bases de datos SQL en Azure (Crear una DB y enlazar con SQL Server Local)
+01:15  Consultas a AdventureWorksLT (SSMS, QE-Azure,VSC-mssql)
+
+=====================================================================================
+DÍA 2
+=====================================================================================
+
+03:00  Web API de AdventureWorksLT
+
+04:30 BREAK
+
+04:45 Crear tabla Contacts, registros y probar API (postman)
+05:00 
+PM 
+04:45  Optimizar el rendimiento de las consultas en SQL Server
+
+=====================================================================================
+DÍA 3
+=====================================================================================
+
+1. Instalación de SQLCMD en WSL (1 hora)
+2. Publicación de WEB API (1 hora)
+
+Break
+
+3. 
+

@@ -1,0 +1,45 @@
+Publicar-Web-API-en-Azure-App-Service:
+
+0.1  En sqlserver-telcel -> Seguridad 
+     -> Redes -> Permitir que otros servicios de Azure accedan a este servidor 
+0.2  Crear el web.config (Por usar Windows) [Copiarlo]
+1.  Crear un grupo de recursos. (Región: East US (suele ser la más barata y compatible))
+2.  Crear recurso -> categoría: Web -> Aplicación web
+3.  Seleccionar grupo de recursos (GrupoWebAPIs)
+4.  Nombre: adventure-works-webapi
+5.  Publicar: Código
+6.  Pila de entorno: .NET 9 (STS)
+7.  Región México Central (Región: East US (suele ser la más barata y compatible))
+8.  Plan de precios: Gratis F1 (infraestructura compartida)
+9.  Siguiente hasta -> Crear 
+10. Abrir WSL o Ubuntu
+
+## INSTALACIÓN DE .NET 9 en WSL
+11. sudo apt update
+12. sudo apt install -y wget apt-transport-https software-properties-common
+13. wget https://packages.microsoft.com/config/ubuntu/$(lsb_release -rs)/packages-microsoft-prod.deb -O packages-microsoft-prod.deb
+14. sudo dpkg -i packages-microsoft-prod.deb
+15. rm packages-microsoft-prod.deb
+16. sudo apt update
+17. sudo apt install -y dotnet-sdk-9.0
+
+## PUBLICACIÓN
+18. dotnet publish -c Release -o ./publish
+19. cd publish
+20. zip -r ../deploy.zip .  (los primeros puntos son la carpeta anterior
+ y el último punto el directorio actual)
+21. cd ..
+22. az webapp deploy \
+  --resource-group adventure-works-webapi_group \
+  --name adventure-works-webapi \
+  --src-path deploy.zip \
+  --type zip
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,81 @@
+Crear-VM-SQL-Server-Con-DB-Azure:
+
+1.  Crear un grupo RecursosIaaS
+2.  Crear un recurso -> Servicios de Infraestructura -> Maquina Virtual
+3.  Nombre: MvErickLinux
+4.  Región: West US 2
+5   Zona de disp: Zona 1
+5.  Tipo de seguridad: Estandar
+7.  Imagen: Ubuntu Server 24.04 LTS - x64 gen. 2 (servicios gratuitos elegibles)
+8.  Tamaño: Standard_B1 o D2als_v6 (Gratis,barata)
+9   Tipo de autenticación: Contraseña
+10. Nombre usuario: erickbecker
+11. Pass: erickABCD#007
+12  Seleccionar puertos de entrada: SSH(22)
+13. Tipo de disco del SO: HDD Estandar
+14. Admin: apagado automatico: 7:00 PM
+15. Zona horaria: CDMX
+16. Verificar y Crear
+
+## Conectarnos a la VM
+17. Ir a la VM en recursos
+18. Abrir WSL
+19. ssh erickbecker@laIPpublicaDeLaVM (Consultar en información general)
+20. Escribir password (El nombre en la terminal cambia)
+
+## Instalar Docker en la VM
+21. sudo apt update
+22. sudo apt install -y docker.io
+23. sudo systemctl enable docker
+24. sudo systemctl start docker
+25. docker --version (Verificación de Docker)
+26. sudo docker pull mcr.microsoft.com/mssql/server:2022-latest (SQL Server)
+27. 	sudo docker run -e 'ACCEPT_EULA=Y' \
+	-e 'SA_PASSWORD=erickABCD#007' \
+	-p 1433:1433 \
+	--name mi-sqlserver \
+	-d mcr.microsoft.com/mssql/server:2022-latest
+28. sudo docker ps (Verificar que ya corre)
+
+## Instalar SQLCMD en Linux
+29. sudo apt-get update
+30. sudo apt-get install curl gnupg -y
+31. curl https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add -
+32. curl https://packages.microsoft.com/config/ubuntu/22.04/prod.list | sudo tee /etc/apt/sources.list.d/msprod.list
+33.  sudo apt-get update
+34. sudo apt-get install mssql-tools unixodbc-dev
+35. echo 'export PATH="$PATH:/opt/mssql-tools/bin"' >> ~/.bashrc
+36. source ~/.bashrc
+37. which sqlcmd (Comprobar la instalación)
+38. sqlcmd -S localhost -U sa -P 'erickABCD#007'
+39. Checar queries-VM-Linux.md
+
+## Conectar SQL Server de la Maquina Virtual en SSMS Local (Opcional)
+40. Ir al grupo RecursosIaaS
+41. Entrar al grupo de seguridad (NSG) asociado a la VM
+42. Configuración -> Reglas de seguridad de entrada -> Agregar
+
+	Campo	   		Valor
+	Origen			Any
+	Puerto de origen	*
+	Destino			Any
+	Puerto de destino	1433
+	Protocolo		TCP
+	Acción			Allow
+	Prioridad		310
+	Nombre			Allow-SQL
+
+43. Agregar (se llamará allow-SQL) 
+44. sudo docker ps
+45. 
+
+
+
+
+
+
+
+
+
+
+
