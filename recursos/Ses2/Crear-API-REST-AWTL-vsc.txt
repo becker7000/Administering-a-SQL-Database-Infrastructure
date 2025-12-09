@@ -1,0 +1,26 @@
+Crear-API-REST-AWTL-vsc:
+
+Intalación previa:
+1. https://dotnet.microsoft.com/en-us/download/dotnet/9.0
+2. Ejecutar: dotnet-sdk-9.0.306-win-x64.exe
+3. Siguiente hasta Finalizar
+4. dotnet --version
+ 
+
+1.  Crear la carpeta: AdventureWorksAPI
+2.  En la terminal checar comando: dotnet new list
+3.  Crear: dotnet new mvc
+4.  Ejecutar: dotnet run
+5.  Contacts.cs
+6.  Ir a https://www.nuget.org/
+7.  Buscar PackageReference de EFCore y EFCore.SqlServer versión 9.0.11
+8.  Pegar en AdventureWorksAPI.csproj en <ItemGroup>
+9.  dotnet restore
+10. dotnet list package
+11. Data/AdventureWorksContext.cs
+12. appsetting.json (cadena de conexión, la de abajo, ajustar password)
+13. Program.cs (registrar servicio de conexión)
+14. ContactsController.cs
+15. Crear la tabla 'Contacts'
+16. Agregar unos registros de ejemplo
+17. Probar la API con Postman

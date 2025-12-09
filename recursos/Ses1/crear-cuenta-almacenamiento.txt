@@ -1,0 +1,22 @@
+Crear una cuenta de almacenamiento y despliegue de un recurso en Azure:
+
+1.  Posicionar en grupo de recursos
+2.  Crear
+3.  Buscar cuenta de almacenamiento
+4.  Cuenta de almacenamiento
+5.  Escribir detalles del proyecto
+6.  Revisar y crear
+7.  Crear (implementación en curso)
+8.  Esperar a "se completó la implementación"
+9.  Ir al recurso
+10. Automation
+11. Exportar plantilla y esperar (plantilla ARM -> Azure Resource Manager)
+12. Descargar y descomprimir en 'prácticas'
+13. Cerrar recurso
+14. Buscar 'Template deployment'
+15. Cree su propia plantilla en el editor
+16. Cargar archivo
+17. Buscar 'template.json' (en CST)
+18. Guardar
+19. Seleccionar grupo de recuros 'miPrimerGrupo'
+20. Revisar y crear -> Crear

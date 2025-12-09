@@ -1,0 +1,24 @@
+Infraestructura como recurso en Azure:
+
+1. Crear un grupo de recursos:
+   az group create -l eastus2 -n GrupoRecursosIaaS
+   (Verificar en el portal de Azure -> Navegar -> Grupos de recursos -> GrupoDeRecursosCLI)
+   Comprobar también con: az group show -n GrupoRecursosIaaS
+
+2. Crear una máquina virtual en Azure:
+   az vm create --resource-group GrupoRecursosIaaS --name iaas-vm-becker --image Ubuntu2204 
+   --size Standard_B1s --admin-username erick --generate-ssh-keys --location eastus2
+
+3. Crear una cuenta de almacenamiento básica: 
+   az storage account create -n beckeriaas007 -g GrupoRecursosIaaS -l eastus2 --sku Standard_LRS
+   
+4. Crear una red virtual (VNet -> Red Virtual)
+   az network vnet create -g GrupoRecursosIaaS -n IaaSVnet007 --address-prefix 10.0.0.0/16 --subnet-name beckerSubnet --subnet-prefixes 10.0.0.0/24
+
+5. Eliminar todos los recursos creados
+   az group delete -n GrupoRecursosIaaS --force-deletion-types Microsoft.Compute/virtualMachines
+
+También borrar los grupos de recursos anteriores:
+
+1. az group delete -n miPrimerGrupo
+2. az group delete -n GrupoDeRecursosCLI

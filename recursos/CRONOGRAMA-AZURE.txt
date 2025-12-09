@@ -1,0 +1,78 @@
+
+=====================================================================================
+DÍA 1 -> INTRO
+=====================================================================================
+
+AM 
+10:00  Examen
+10:15  Intro a Azure Databases
+10:30  Instalaciones (Azure, SQL Server y SSMS)
+11:30  Servicios en Azure
+
+PM
+12:00  BREAK
+
+12:15  Paseo general por Azure:
+        1.  Checar la calculadora de Azure
+	2.  Crear grupo de recursos
+01:10	3.  Crear cuenta de almacenamiento
+01:20	4.  Instalación CLI Azure
+01:30	5.  Automatización de despliegue en Azure CLI
+01:45	6.  Infraestructura como recurso en Azure (CLI)
+
+02:00  COMIDA
+
+03:00  Instalación de WSL y SQLCMD en WSL
+03:25  Conexión a SQL Server
+03:45  Probar consultas SQL Server (local) desde SQLCMD en WSL
+04:15  Libre
+
+04:30  BREAK
+
+04:45  Libre
+
+06:00  FIN
+
+=====================================================================================
+DÍA 2 -> IAAS + OPTIMIZACIÓN
+=====================================================================================
+
+AM
+10:00 Creación de una maquina virtual Ubuntu con SQL Server 2019
+10:40 Conexión a la VM con SQLCMD SQL a través de WSL
+11:00 Conexión de la VM con SSMS (Probar algunos comandos)
+11:30 Libre
+
+PM
+12:00 BREAK
+
+12:15 Intro a Azure SQL
+12:30 Bases de datos SQL en Azure (Crear una DB y enlazar con SQL Server Local)
+01:00 Consultas a AdventureWorksLT (SSMS, QE-Azure,VSC-mssql)
+
+02:00 COMIDA
+
+03:00 Consultas usando la SQLCMD en WSL de la BD de AdventureWorksLT (1 hora)
+04:00 Libre
+
+04:30 BREAK
+
+04:45 Libre
+
+06:00 FIN
+
+
+=====================================================================================
+DÍA 3 -> PAAS + API
+=====================================================================================
+
+AM
+10:00 Optimizar el rendimiento de las consultas en SQL Server
+
+
+(TEMA OPCIONAL)
+Web API de AdventureWorksLT
+Crear tabla Contacts, registros y probar API (postman)
+Publicación de WEB API (1 hora) (Probar con Postman)
+
+
