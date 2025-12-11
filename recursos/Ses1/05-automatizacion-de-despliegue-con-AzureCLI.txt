@@ -1,0 +1,21 @@
+Automatización de despliegue en Azure:
+
+# Creando grupo de recursos desde la CLI
+1. az group create -l eastus2 -n GrupoDeRecursosCLI
+   (Verificar en el portal de Azure -> Navegar -> Grupos de recursos -> GrupoDeRecursosCLI)
+   
+
+# Creando cuenta de almacenamiento desde la CLI
+2. az storage account create -n cuentaclibecker123 -g GrupoDeRecursosCLI -l eastus2 --sku Standard_LRS
+   (las cuentas de almacenamiento requieren nombres únicos)
+
+	-n es el nombre único de la cuenta de almacenamiento
+	-g especifica el grupo de recursos donde se desplegará
+	-l define la ubicación
+	--sku establece el tipo de cuenta (en este caso Standard_LRS)
+
+Alguno comandos útiles:
+
+1. az --help (documentación directamente desde la terminal)
+2. az storage --help (acotamos el comando a un tema)
+3. az storage account --help

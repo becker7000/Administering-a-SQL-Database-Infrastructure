@@ -1,0 +1,13 @@
+Instalación de CLI Azure
+
+Pasos a seguir en WSL-Ubuntu:
+1.  curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash
+2.  az  (para confirmar, ayuda de comandos)
+3.  az login (debe aparecer un pequeño navegador, pero esta restringido)
+4.  az login --use-device-code (usamos el comando sugerido)
+5.  ctrl + c (cancelar el comando anterior)
+6.  az login --use-device-code
+7.  ctrl + click en el link
+8.  Usar el código que viene en la terminal para iniciar sesión
+9.  Digitamos el número de subscripción 1 y listo
+10. az account show
