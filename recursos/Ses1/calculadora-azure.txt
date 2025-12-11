@@ -1,3 +1,0 @@
-Calculadora Azure
-https://azure.microsoft.com/en-us/pricing/free-services
-
