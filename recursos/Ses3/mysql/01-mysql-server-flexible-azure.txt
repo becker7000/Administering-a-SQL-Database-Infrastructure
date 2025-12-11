@@ -1,0 +1,28 @@
+
+## CREANDO UNA INSTANCIA DE SERVIDOR DE MYSQL SERVER PARA AZURE DATABASE:
+
+1.  Crear un grupo de recursos RecursosMySQL
+2.  Servidor Flexible (Creación rápida)
+3.  Grupo de recursos: RecursosMySQL
+4.  Nombre del servidor: mysqlserver-telcel
+5.  Administrador: erickbecker
+6.  Contraseña: erickABCD#007
+7.  Tipo de carga de trabajo: Desarrollo/Pruebas
+8.  Agregar regla de firewall para dirección IP Actual
+9.  lower_case_table_names: 1 -> Los nombres se guardan en minúsculas 
+    (las comparaciones no distinguen mayúsculas/minúsculas)
+10. Revisar y crear
+
+
+## CONECTANDO CON WORKBENCH
+1.  Ir a información general de mysqlserver-erick
+2.  Configuración -> Redes -> Agregar dirección IP del cliente Actual -> Guardar
+3.  Abrir Workbench -> Nueva conexión
+4.  	Connection Name: Azure MySQL
+5.  	Hostname: mysqlserver-telcel.mysql.database.azure.com
+6.      Username: erickbecker
+7.	Ok
+8.  Click en Azure MySQL -> Escribir contraseña
+
+## PROBANDO CONSULTAS
+1.  Checar: queries-mysql-azure.md
